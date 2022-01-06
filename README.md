@@ -19,14 +19,25 @@ See CONTRIBUTING.md pls thx
 - MS Teams (does not work on the rest of Office 365!)
 
 ## Loaded chunks
-Used by some sites with this one React code splitting lib, works on:
- - Reddit
 
-## Discord:
+Used by some sites with
+[`@loadable/component`](https://github.com/gregberge/loadable-components),
+works on:
 
-`webpackChunkdiscord_app`, only works on Discord.
+- Reddit
 
-Older versions of discord used `webpackJsonp` array.
+## Parcel Require
+
+Works on apps built with Parcel. No currently known sites/apps.
+
+## Chunk:
+
+`webpackChunk{something}`, for apps with webpack chunks.
+
+Works on:
+
+- Discord: `webpackChunkdiscord_app`
+- Telegram: `webpackChunktelegram_t` (PARTIALLY: only returns default exports (i think thats what they are?))
 
 ## Recursive VSCode
 

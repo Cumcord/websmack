@@ -6,7 +6,7 @@ Found a new snippet that works for a new site: PR.
 
 Other bundlers than Webpack are allowed.
 
-Note that some, like Vite, do not expose any way to get into their modules past build time.
+Note that most, like Vite.js (via esbuild) & Rollup, do not expose any way to get into their modules past build time.
 
 ## Top tips
 
