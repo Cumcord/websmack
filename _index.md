@@ -22,3 +22,7 @@ Older versions of discord used `webpackJsonp` array.
 
 `window.module` is a webpack module, and we recurse down to find all children.
 Does not work very well, and AFAIK only works in vscode.
+
+# Loaded chunks
+Used by some sites with this one React code splitting lib, works on:
+ - Reddit
