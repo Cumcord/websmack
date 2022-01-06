@@ -19,3 +19,6 @@ export default get;
 
 export const discord = () => get("discord_app");
 export const telegram = () => get("telegram_t");
+export const tidal = () => get("_tidal_web");
+export const spotifyWeb = () => get("client_web");
+export const spotifyApp = () => get("open");

@@ -17,6 +17,21 @@ Works on:
 - Twitter
   - Tweetdeck
 - MS Teams (not the rest of Office 365!)
+- Deezer (`webpackJsonpDeezer`)
+- Soundcloud
+
+## `webpackChunk`
+
+`webpackChunk{something}`, for apps with webpack chunks.
+
+Works on:
+
+- Discord: `webpackChunkdiscord_app`
+- Telegram: `webpackChunktelegram_t` (PARTIALLY: only returns default exports (i think thats what they are?))
+- Tidal: `webpackChunk_tidal_web`
+- Spotify
+  - Web: `webpackChunkclient_web`
+  - App: `webpackChunkopen`
 
 ## Loaded chunks
 
@@ -29,15 +44,6 @@ works on:
 ## Parcel Require
 
 Works on apps built with Parcel. No currently known sites/apps.
-
-## Chunk:
-
-`webpackChunk{something}`, for apps with webpack chunks.
-
-Works on:
-
-- Discord: `webpackChunkdiscord_app`
-- Telegram: `webpackChunktelegram_t` (PARTIALLY: only returns default exports (i think thats what they are?))
 
 ## Recursive VSCode
 

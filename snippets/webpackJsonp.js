@@ -1,8 +1,8 @@
-export default () => {
+const get = (name = "webpackJsonp") => {
   const wjp =
-    typeof webpackJsonp === "function"
-      ? webpackJsonp
-      : (...args) => webpackJsonp.push(args);
+    typeof window[name] === "function"
+      ? window[name]
+      : (...args) => window[name].push(args);
 
   let modules = wjp(
     [],
@@ -11,7 +11,12 @@ export default () => {
     },
     [["get"]]
   );
+  
   delete modules.m.get;
   delete modules.c.get;
   return modules.c;
 };
+
+export default get;
+
+export const deezer = () => get("webpackJsonpDeezer");
