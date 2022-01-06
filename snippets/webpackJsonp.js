@@ -1,5 +1,10 @@
 export default () => {
-  let modules = webpackJsonp(
+  const wjp =
+    typeof webpackJsonp === "function"
+      ? webpackJsonp
+      : (...args) => webpackJsonp.push(args);
+
+  let modules = wjp(
     [],
     {
       get: (m, _, wpRequire) => (m.exports = wpRequire),

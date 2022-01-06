@@ -6,11 +6,17 @@ See CONTRIBUTING.md pls thx
 
 ## `webpackJsonp` array
 
-`webpackJsonp` is an array, works on:
+`webpackJsonp` is either an array to which we can push to to grab modules,
+or a function which we can call to push to to grab modules.
+
+Grammar moment ("to to").
+
+Works on:
 
 - Slack
 - Twitter
   - Tweetdeck
+- MS Teams (not the rest of Office 365!)
 
 ## `webpackJsonp` func
 
