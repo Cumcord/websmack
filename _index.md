@@ -1,0 +1,24 @@
+# Discord:
+
+`webpackChunkdiscord_app`, only works on Discord.
+
+Older versions of discord used `webpackJsonp` array.
+
+# `webpackJsonp` array
+
+`webpackJsonp` is an array, works on:
+
+- Slack
+- Twitter
+  - Tweetdeck
+
+# `webpackJsonp` func
+
+`webpackJsonp` is a function, works on:
+
+- MS Teams (does not work on the rest of Office 365!)
+
+# Recursive VSCode
+
+`window.module` is a webpack module, and we recurse down to find all children.
+Does not work very well, and AFAIK only works in vscode.
