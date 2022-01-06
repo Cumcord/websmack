@@ -4,7 +4,7 @@ Webpack? Yeah no web-unpack.
 
 See CONTRIBUTING.md pls thx
 
-## `webpackJsonp` array
+## `webpackJsonp`
 
 `webpackJsonp` is either an array to which we can push to to grab modules,
 or a function which we can call to push to to grab modules.
@@ -17,12 +17,6 @@ Works on:
 - Twitter
   - Tweetdeck
 - MS Teams (not the rest of Office 365!)
-
-## `webpackJsonp` func
-
-`webpackJsonp` is a function, works on:
-
-- MS Teams (does not work on the rest of Office 365!)
 
 ## Loaded chunks
 
