@@ -17,7 +17,7 @@ Works on:
 - Twitter
   - Tweetdeck
 - MS Teams (not the rest of Office 365!)
-- Deezer (`webpackJsonpDeezer`)
+- Deezer (as `webpackJsonpDeezer`)
 - Soundcloud
 
 ## `webpackChunk`

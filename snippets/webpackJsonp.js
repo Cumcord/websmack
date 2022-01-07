@@ -1,8 +1,12 @@
-const get = (name = "webpackJsonp") => {
+export default () => {
+  const key = Object.keys(window).find((key) =>
+    key.startsWith("webpackJsonp")
+  );
+
   const wjp =
-    typeof window[name] === "function"
-      ? window[name]
-      : (...args) => window[name].push(args);
+    typeof window[key] === "function"
+      ? window[key]
+      : (...args) => window[key].push(args);
 
   let modules = wjp(
     [],
@@ -16,7 +20,3 @@ const get = (name = "webpackJsonp") => {
   delete modules.c.get;
   return modules.c;
 };
-
-export default get;
-
-export const deezer = () => get("webpackJsonpDeezer");
