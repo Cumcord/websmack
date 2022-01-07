@@ -4,8 +4,9 @@ import loaded_chunks from "./loaded_chunks";
 import parcelRequire from "./parcelRequire"
 import recursive_vscode from "./recursive_vscode"
 
-const matchKey = (key)
-    => Object.keys(window).find((k) => key.startsWith(key));
+const matchKey = 
+    (key) =>
+        Object.keys(window).find((k) => key.startsWith(key));
 
 export default () => {
     if (matchKey("webpackJsonp"))
