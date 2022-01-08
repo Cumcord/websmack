@@ -2,9 +2,12 @@
   "name": "modulegrabbers",
   "version": "1.0.0",
   "description": "web bundlers' hard work undone.",
-  "main": "snippets/auto.js",
+  "source": "snippets/auto.js",
+  "main": "dist.js",
+  "module": "dist.js"
   "scripts": {
-    "bundle": "esbuild snippets/auto.js --bundle --minify --outfile=dist.js"
+    "bundle": "esbuild snippets/auto.js --bundle --outfile=dist.js",
+    "prepublish": "\"$npm_execpath\" run bundle"
   },
   "repository": {
     "type": "git",
