@@ -8,7 +8,7 @@ const matchKey =
     (key) =>
         Object.keys(window).find((k) => k.startsWith(key));
 
-export default () => {
+const auto = () => {
     if (matchKey("webpackJsonp"))
         return webpackJsonp();
     
@@ -26,3 +26,7 @@ export default () => {
     
     throw new Error("Could not match any module fetching method.")
 }
+
+export default auto;
+
+export { auto, webpackJsonp, webpackChunk, loaded_chunks, parcelRequire, recursive_vscode };

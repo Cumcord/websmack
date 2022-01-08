@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "web bundlers' hard work undone.",
   "source": "snippets/auto.js",
-  "main": "dist.js",
-  "module": "dist.js"
+  "main": "snippets/auto.js",
+  "module": "snippets/auto.js",
   "scripts": {
-    "bundle": "esbuild snippets/auto.js --bundle --outfile=dist.js",
-    "prepublish": "\"$npm_execpath\" run bundle"
+    "bundle": "esbuild snippets/auto.js --bundle --outfile=dist.js"
   },
   "repository": {
     "type": "git",
