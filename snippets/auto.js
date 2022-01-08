@@ -6,7 +6,7 @@ import recursive_vscode from "./recursive_vscode"
 
 const matchKey = 
     (key) =>
-        Object.keys(window).find((k) => key.startsWith(key));
+        Object.keys(window).find((k) => k.startsWith(key));
 
 export default () => {
     if (matchKey("webpackJsonp"))
