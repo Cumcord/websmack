@@ -1,6 +1,6 @@
 {
   "name": "web-bundler-unpack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "web bundlers' hard work undone.",
   "source": "snippets/auto.js",
   "main": "snippets/auto.js",
