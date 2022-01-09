@@ -1,5 +1,5 @@
 {
-  "name": "webunpack",
+  "name": "web-bundler-unpack",
   "version": "1.0.0",
   "description": "web bundlers' hard work undone.",
   "source": "snippets/auto.js",
