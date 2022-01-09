@@ -1,5 +1,5 @@
 {
-  "name": "modulegrabbers",
+  "name": "webunpack",
   "version": "1.0.0",
   "description": "web bundlers' hard work undone.",
   "source": "snippets/auto.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yellowsink/modulegrabbers.git"
+    "url": "git+https://github.com/yellowsink/webunpack.git"
   },
   "author": "Yellowsink",
   "license": "Unlicense",
   "bugs": {
-    "url": "https://github.com/yellowsink/modulegrabbers/issues"
+    "url": "https://github.com/yellowsink/webunpack/issues"
   },
-  "homepage": "https://github.com/yellowsink/modulegrabbers#readme",
+  "homepage": "https://github.com/yellowsink/webunpack#readme",
   "devDependencies": {
     "esbuild": "^0.14.10"
   }

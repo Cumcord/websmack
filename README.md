@@ -1,6 +1,8 @@
-# Module Grabbers
+# Module Grabbers // webunpack
 
-Webpack? Yeah no web-unpack.
+Webpack? Yeah no I prefer web-un-pack.
+
+Also parcel ayo
 
 See CONTRIBUTING.md pls thx
 

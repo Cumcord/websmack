@@ -27,6 +27,8 @@ const auto = () => {
     throw new Error("Could not match any module fetching method.")
 }
 
+console.log(auto())
+
 export default auto;
 
 export { auto, webpackJsonp, webpackChunk, loaded_chunks, parcelRequire, recursive_vscode };
