@@ -1,5 +1,5 @@
 {
-  "name": "web-bundler-unpack",
+  "name": "@polystratum/webunpack",
   "version": "1.0.1",
   "description": "web bundlers' hard work undone.",
   "source": "snippets/auto.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yellowsink/webunpack.git"
+    "url": "git+https://github.com/PolyStratum/webunpack.git"
   },
-  "author": "Yellowsink",
+  "author": "PolyStratum project",
   "license": "Unlicense",
   "bugs": {
-    "url": "https://github.com/yellowsink/webunpack/issues"
+    "url": "https://github.com/PolyStratum/webunpack/issues"
   },
-  "homepage": "https://github.com/yellowsink/webunpack#readme",
+  "homepage": "https://github.com/PolyStratum/webunpack#readme",
   "devDependencies": {
     "esbuild": "^0.14.10"
   }
