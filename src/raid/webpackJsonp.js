@@ -1,6 +1,7 @@
 export default () => {
+  debugger
   const key = Object.keys(window).find((key) =>
-    key.startsWith("webpackJsonp")
+    key.includes("Jsonp")
   );
 
   const wjp =
@@ -9,7 +10,7 @@ export default () => {
       : (...args) => window[key].push(args);
 
   let modules = wjp(
-    [],
+    [Symbol()],
     {
       get: (m, _, wpRequire) => (m.exports = wpRequire),
     },

@@ -2,22 +2,14 @@
   "name": "@polystratum/webunpack",
   "version": "1.0.1",
   "description": "web bundlers' hard work undone.",
-  "source": "snippets/auto.js",
-  "main": "snippets/auto.js",
-  "module": "snippets/auto.js",
+  "main": "src/auto.js",
+  "module": "src/auto.js",
   "scripts": {
-    "bundle": "esbuild snippets/auto.js --bundle --outfile=dist.js"
+    "bundle": "esbuild src/index.js --bundle --outfile=dist.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PolyStratum/webunpack.git"
-  },
+  "repository": "github:PolyStratum/webunpack",
   "author": "PolyStratum project",
   "license": "Unlicense",
-  "bugs": {
-    "url": "https://github.com/PolyStratum/webunpack/issues"
-  },
-  "homepage": "https://github.com/PolyStratum/webunpack#readme",
   "devDependencies": {
     "esbuild": "^0.14.10"
   }

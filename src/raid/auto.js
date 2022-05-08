@@ -6,23 +6,23 @@ import recursive_vscode from "./recursive_vscode"
 
 const matchKey = 
     (key) =>
-        Object.keys(window).find((k) => k.startsWith(key));
+        Object.keys(window).find((k) => k.includes(key));
 
 const auto = () => {
-    if (matchKey("webpackJsonp"))
-        return webpackJsonp();
+    if (matchKey("Jsonp"))
+        return ["jsonp", webpackJsonp()];
     
     if (matchKey("webpackChunk"))
-        return webpackChunk();
+        return ["chunk", webpackChunk()];
     
     if (matchKey("__LOADABLE_LOADED_CHUNKS__"))
-        return loaded_chunks();
+        return ["loadable", loaded_chunks()];
     
     if (matchKey("parcelRequire"))
-        return parcelRequire();
+        return ["parcel", parcelRequire()];
     
     if (matchKey("module") && window.module.children)
-        return recursive_vscode();
+        return ["vsc", recursive_vscode()];
     
     throw new Error("Could not match any module fetching method.")
 }
@@ -30,3 +30,5 @@ const auto = () => {
 export default auto;
 
 export { auto, webpackJsonp, webpackChunk, loaded_chunks, parcelRequire, recursive_vscode };
+
+window.auto = auto;
