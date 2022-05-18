@@ -1,5 +1,4 @@
 export default () => {
-  debugger
   const key = Object.keys(window).find((key) =>
     key.includes("Jsonp")
   );
@@ -9,15 +8,16 @@ export default () => {
       ? window[key]
       : (...args) => window[key].push(args);
 
-  let modules = wjp(
+  let wpRequire;
+   wjp(
     [Symbol()],
     {
-      get: (m, _, wpRequire) => (m.exports = wpRequire),
+      get: (_m, _, wpRq) => (wpRequire = wpRq),
     },
     [["get"]]
   );
   
-  delete modules.m.get;
-  delete modules.c.get;
-  return modules.c;
+  delete wpRequire.m.get;
+  delete wpRequire.c.get;
+  return wpRequire.c;
 };
