@@ -1,7 +1,9 @@
-export default () => {
-  const key = Object.keys(window).find((key) =>
+export default (key) => {
+  key ??= Object.keys(window).find((key) =>
     key.includes("Jsonp")
   );
+
+  if (!window[key]) return;
 
   const wjp =
     typeof window[key] === "function"

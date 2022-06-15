@@ -1,34 +1,24 @@
 import webpackJsonp from "./webpackJsonp";
 import webpackChunk from "./webpackChunk";
 import loaded_chunks from "./loaded_chunks";
-import parcelRequire from "./parcelRequire"
-import recursive_vscode from "./recursive_vscode"
+import parcelRequire from "./parcelRequire";
+//import amdLoader from "./amdLoader";
 
-const matchKey = 
-    (key) =>
-        Object.keys(window).find((k) => k.includes(key));
+export default (key) => {
+  const jsonp = webpackJsonp(key);
+  if (jsonp) return ["jsonp", jsonp];
 
-const auto = () => {
-    if (matchKey("Jsonp"))
-        return ["jsonp", webpackJsonp()];
-    
-    if (matchKey("webpackChunk"))
-        return ["chunk", webpackChunk()];
-    
-    if (matchKey("__LOADABLE_LOADED_CHUNKS__"))
-        return ["loadable", loaded_chunks()];
-    
-    if (matchKey("parcelRequire"))
-        return ["parcel", parcelRequire()];
-    
-    if (matchKey("module") && window.module.children)
-        return ["vsc", recursive_vscode()];
-    
-    throw new Error("Could not match any module fetching method.")
-}
+  const chunk = webpackChunk(key);
+  if (chunk) return ["chunk", chunk];
 
-export default auto;
+  const loadable = loaded_chunks(key);
+  if (loadable) return ["loadable", loadable];
 
-export { auto, webpackJsonp, webpackChunk, loaded_chunks, parcelRequire, recursive_vscode };
+  const parcel = parcelRequire(key);
+  if (parcel) return ["parcel", parcel];
 
-window.auto = auto;
+  /*const amd = amdLoader(key);
+  if (amd) return ["amd", amd];*/
+
+  throw new Error("No module fetching methods succeeded.");
+};

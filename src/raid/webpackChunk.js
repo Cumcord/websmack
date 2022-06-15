@@ -1,5 +1,8 @@
-export default () => {
-  const key = Object.keys(window).find((key) => key.startsWith("webpackChunk"));
+export default (key) => {
+  key ??= Object.keys(window).find((key) => key.startsWith("webpackChunk"));
+
+  if (!window[key]) return;
+
   let wpRequire;
 
   window[key].push([
@@ -12,13 +15,14 @@ export default () => {
 
   window[key].pop();
 
-  if (wpRequire.c) return wpRequire.c;
-
-  // wow thats jank
-  return Object.fromEntries(
-    Object.entries(wpRequire.m).map(([k, v]) => [
-      k,
-      { id: k, loaded: true, exports: wpRequire(k) },
-    ])
+  return (
+    wpRequire.c ??
+    // wow thats jank lmao
+    Object.fromEntries(
+      Object.entries(wpRequire.m).map(([k]) => [
+        k,
+        { id: k, loaded: true, exports: wpRequire(k) },
+      ])
+    )
   );
 };
