@@ -29,7 +29,7 @@ or a function which we can call to push to to grab modules.
 `webpackChunk{something}`, for apps with webpack chunks.
 
 - Discord
-- Telegram (PARTIALLY: only returns default exports (i think thats what they are?))
+- Telegram (mostly)
 - Tidal
 - Spotify (web & app)
 
