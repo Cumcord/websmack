@@ -1,14 +1,14 @@
 {
-  "name": "@polystratum/webunpack",
-  "version": "1.0.1",
+  "name": "@cumjar/websmack",
+  "version": "1.0.2",
   "description": "web bundlers' hard work undone.",
-  "main": "src/auto.js",
-  "module": "src/auto.js",
+  "main": "src/index.js",
+  "module": "src/index.js",
   "scripts": {
-    "bundle": "esbuild src/index.js --bundle --outfile=dist.js"
+    "build": "esbuild src/index.js --bundle --outfile=dist.js"
   },
-  "repository": "github:PolyStratum/webunpack",
-  "author": "PolyStratum project",
+  "repository": "github:Cumcord/websmack",
+  "author": "Cumcord team",
   "license": "Unlicense",
   "devDependencies": {
     "esbuild": "^0.14.10"
