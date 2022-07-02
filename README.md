@@ -17,6 +17,8 @@ Just grabs the modules, trying every method until one works.
 `webpackJsonp` is either an array to which we can push to to grab modules,
 or a function which we can call to push to to grab modules.
 
+This method also works for @loadable/component sites, notably Reddit.
+
 - Slack
 - Twitter
   - Tweetdeck
@@ -32,13 +34,6 @@ or a function which we can call to push to to grab modules.
 - Telegram (mostly)
 - Tidal
 - Spotify (web & app)
-
-## `loaded_chunks`
-
-Used by some sites with
-[`@loadable/component`](https://github.com/gregberge/loadable-components)
-
-- Reddit
 
 ## `parcelRequire`
 
