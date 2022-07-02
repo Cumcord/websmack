@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "module": "src/index.js",
   "scripts": {
-    "build": "esbuild src/index.js --bundle --outfile=dist.js"
+    "prepublish": "esbuild src/snippet.js --bundle --outfile=dist.js"
   },
   "repository": "github:Cumcord/websmack",
   "author": "Cumcord team",
