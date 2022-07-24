@@ -5,10 +5,10 @@ import parcelRequire from "./parcelRequire";
 
 export default (key) => {
   const jsonp = webpackJsonp(key);
-  if (jsonp) return ["jsonp", jsonp];
+  if (jsonp?.[0]) return ["jsonp", ...jsonp];
 
   const chunk = webpackChunk(key);
-  if (chunk) return ["chunk", chunk];
+  if (chunk?.[0]) return ["chunk", ...chunk];
 
   const parcel = parcelRequire(key);
   if (parcel) return ["parcel", parcel];

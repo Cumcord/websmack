@@ -22,5 +22,5 @@ export default (key) => {
 
   delete wpRequire.m.get;
   delete wpRequire.c.get;
-  return wpRequire.c;
+  return [wpRequire.c, wpRequire];
 };

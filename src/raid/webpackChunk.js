@@ -15,7 +15,7 @@ export default (key) => {
 
   window[key].pop();
 
-  return (
+  return [(
     wpRequire.c ??
     // wow thats jank lmao
     Object.fromEntries(
@@ -24,5 +24,5 @@ export default (key) => {
         { id: k, loaded: true, exports: wpRequire(k) },
       ])
     )
-  );
+  ), wpRequire];
 };
