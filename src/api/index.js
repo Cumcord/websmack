@@ -1,4 +1,5 @@
 import * as filters from "./filters";
+import batch from "./batch";
 
 const filter =
   (modules, single = true) =>
@@ -56,3 +57,5 @@ export default ([, modules, wpR]) => {
     findByCode: (c) => findByCodeAll(c)[0],
   };
 };
+
+export const batchFind = ([, modules]) => batch(modules)
