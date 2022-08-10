@@ -35,6 +35,8 @@ export default ([, modules, wpR]) => {
       };
 
   return {
+    batchFind: batch(modules),
+
     find,
     findAll,
 
