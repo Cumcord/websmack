@@ -41,6 +41,9 @@ export default ([, modules, wpR]) => {
     findByProps: (...p) => find(filters.byProps(p)),
     findByPropsAll: (...p) => findAll(filters.byProps(p)),
 
+    findByPrototypes: (...p) => find(filters.byProtos(p)),
+    findByPrototypesAll: (...p) => findAll(filters.byProtos(p)),
+
     findByNestedProps: (...p) => find(filters.byNestedProps(p)),
     findByNestedPropsAll: (...p) => findAll(filters.byNestedProps(p)),
 

@@ -34,6 +34,9 @@ const makeFakeWp = (filterList) => ({
   findByProps: (...p) => filterList.push([filters.byProps(p), false]),
   findByPropsAll: (...p) => filterList.push([filters.byProps(p), true]),
 
+  findByPrototypes: (...p) => filterList.push([filters.byProtos(p), false]),
+  findByPrototypesAll: (...p) => filterList.push([filters.byProtos(p), true]),
+
   findByNestedProps: (...p) =>
     filterList.push([filters.byNestedProps(p), false]),
   findByNestedPropsAll: (...p) =>

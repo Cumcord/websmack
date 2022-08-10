@@ -1,6 +1,8 @@
 // filters originating from cumcord
 export const byProps = (props) => (m) => props.every((p) => m[p] !== undefined);
 
+export const byProtos = (protos) => (m) => m.prototype && protos.every((p) => m.prototype[p] !== undefined)
+
 export const byDisplayName =
   (name, defaultExp = true) =>
   (m) =>
